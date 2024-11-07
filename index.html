@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <title>Photography Showcase</title>
 </head>
 <body>
     <header>
-        <nav>
-            <div>
-                <img src="./images/logo.png" alt="image of logo" width="50">
+        <nav class="container">
+            <div id="logo">
+                <img src="./assets/logo.png" alt="image of logo" width="50">
                 <p>Photography Showcase</p>
             </div>
-            <a href="./pages/about.html" target="_blank">About</a>
-            <a href="#">Login</a>
-            <a href="#">Register</a>
-            <a href="#">Showcases</a>
+            <div class="nav-links">
+                <a href="./pages/about.html" target="_blank">About</a>
+                <a href="#">Showcases</a>
+                <a href="#">License</a>
+                <a href="#">Login</a>
+                <a href="#" id="register">Register</a>
+            </div>
+            <img src="./assets/menu.png" alt="menu icon" id="menu-btn">
+            <div class="mobile-menu-links">
+                <a href="./pages/about.html" target="_blank">About</a>
+                <a href="#">Showcases</a>
+                <a href="#">License</a>
+                <a href="#">Login</a>
+                <a href="#" id="register">Register</a>
+            </div>
         </nav>
-        <h1>The best photography showcase shared by creators.</h1>
-        <input type="text" placeholder="Search for photos">
+        <div class="header-main">
+            <div class="header-input">
+                <h1>The best photography showcase shared by creators.</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for photos">
+                    <img src="./assets/search.png" alt="search icon" width="18">
+                </div>
+            </div>
+        </div>
     </header>
     <section>
         <div>
@@ -42,5 +61,6 @@
     <footer>
         This is footer
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>

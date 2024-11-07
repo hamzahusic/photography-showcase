@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    font-size: 18px;
+    color: white;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    img{
+        border-radius: 10px;
+    }
+}
+.mobile-menu-links{
+    position: absolute;
+    background-color: #52AFA2;
+    padding: 20px;
+    bottom: -210px;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    margin: 0 10px;
+}
+.active{
+    display: flex;
+}
+#menu-btn{
+    width: 30px;
+    cursor: pointer;
+    align-self: flex-end;
+    border-radius: 0px;
+}
+
+header{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./assets/pexels-garrettmorrow-736414.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 1);
+    height: 80vh;
+    background-color: black;
+    h1{
+        color: white;
+    }
+    .nav-links{
+        display: none;
+        gap:10px;
+        align-items: center;
+    }
+    .header-input{
+        h1{
+            font-size: 30px;
+            text-align: center;
+        }
+        .search-bar{
+            background-color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 auto;
+            border-radius: 10px;
+            padding: 5px 20px;
+            max-width: 630px;
+            margin-top: 25px;
+        }
+        .search-bar input{
+            width: 100%;
+            padding: 10px 10px;
+            outline: none;
+            font-size: 16px;
+            border: none;
+        }
+        .search-bar img{
+            cursor: pointer;
+        }
+    }
+    .header-main{
+        display: grid;
+        place-items: start center;
+        margin-top: 100px;
+        height: 100%;
+        padding: 0 10px;
+    }
+    #register{
+        background-color: white;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+    #register:hover{
+        background-color: rgba(223, 220, 220, 0.4);
+        color: white;
+        transition: all 0.5s;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    header{
+        .nav-links{
+            display: flex;
+            gap:10px;
+            align-items: center;
+        }  
+        .header-input{
+            h1{
+                font-size: 40px;
+                text-align: center;
+            }
+            .search-bar input{
+                font-size: 20px;
+            }
+        }
+
+    }
+    #menu-btn{
+        display: none;
+        align-self: center;
+    }
+    .mobile-menu-links{
+        display: none;
+    }
+  }
+  
