@@ -237,6 +237,31 @@ header{
     }
 }
 
+footer{
+    background-color: darkslategray;
+    color: white;
+    padding: 50px 10px 30px 10px ;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid lightgray;
+        padding-top: 20px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    #logo{
+        margin-bottom: 20px;
+    }
+    img{
+        border-radius: 10px;
+    }
+}
+
 @media screen and (min-width: 500px) {
     .gallery{
         grid-template-columns: repeat(2,1fr);
