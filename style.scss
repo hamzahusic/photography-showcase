@@ -66,7 +66,7 @@ header{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: rgba(0, 0, 0, 1);
-    height: 70vh;
+    height: 500px;
     background-color: black;
     h1{
         color: white;
@@ -263,6 +263,9 @@ footer{
 }
 
 @media screen and (min-width: 500px) {
+    header{
+        height: 400px;
+    }
     .gallery{
         grid-template-columns: repeat(2,1fr);
     }
@@ -270,7 +273,7 @@ footer{
 
 @media screen and (min-width: 850px) {
     header{
-        height: 80vh;
+        height: 550px;
         .nav-links{
             display: flex;
             gap:10px;
