@@ -48,6 +48,7 @@ nav img {
   gap: 10px;
   text-align: center;
   margin: 0 10px;
+  z-index: 999;
 }
 
 .active {
@@ -57,7 +58,7 @@ nav img {
 #menu-btn {
   width: 30px;
   cursor: pointer;
-  align-self: flex-end;
+  align-self: center;
   border-radius: 0px;
 }
 
