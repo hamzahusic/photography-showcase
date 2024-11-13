@@ -96,7 +96,6 @@ h3{
         font-size: 20px;
     }
     .allowed, .not-allowed{
-        list-style-image: url("../check.png");
         max-width: 600px;
         padding: 0 20px;
     }

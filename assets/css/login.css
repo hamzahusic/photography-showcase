@@ -1,0 +1,35 @@
+nav{
+    color: black;
+    a{
+        color: black;
+    }
+    #register{
+        background-color: #52AFA2;
+        color: black;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+}
+
+.nav-links{
+    display: none;
+}
+
+.mobile-menu-links a{
+    color: white;
+}
+
+#birthdate{
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid gainsboro;
+}
+
+@media screen and (min-width:850px) {
+    .nav-links{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}
