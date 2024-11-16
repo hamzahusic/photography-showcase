@@ -34,18 +34,19 @@
             <a href="./register.html" id="register">Register</a>
         </div>
     </nav>
-    <form style="max-width: 500px; margin: 0 auto; padding: 50px 20px;">
+    <form style="max-width: 500px; margin: 0 auto; padding: 50px 20px;" method="POST" action="https://jsonplaceholder.typicode.com/posts" class="was-validated">
       <div class="form-group mb-3">
         <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control mt-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input type="email" class="form-control mt-2" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+        <small id="emailHelp" class="form-text valid-feedback">We'll never share your email with anyone else.</small>
+        <small id="emailHelp" class="form-text invalid-feedback">Please provide valid email</small>
       </div>
       <div class="form-group mb-3">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control mt-2" id="exampleInputPassword1" placeholder="Password">
+        <input type="password" class="form-control mt-2" name="password" id="exampleInputPassword1" placeholder="Password" required>
       </div>
       <div class="form-group form-check mb-3">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="keep_logged_in">
         <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
       </div>
       <button type="submit" class="btn btn-primary" style="width: 100%; background-color: #52AFA2; border: none;">Login</button>
