@@ -241,14 +241,13 @@ header{
 footer{
     background-color: darkslategray;
     color: white;
-    padding: 50px 10px 30px 10px ;
+    padding: 50px 10px 20px 10px ;
     a{
         text-decoration: none;
         color: white;
     }
     .copyright{
         display: flex;
-        align-items: center;
         justify-content: space-between;
         border-top: 1px solid lightgray;
         padding-top: 20px;
@@ -256,7 +255,7 @@ footer{
         flex-wrap: wrap;
     }
     #logo{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     img{
         border-radius: 10px;

@@ -239,7 +239,7 @@ header #register:hover {
 footer {
   background-color: darkslategray;
   color: white;
-  padding: 50px 10px 30px 10px;
+  padding: 50px 10px 20px 10px;
 }
 footer a {
   text-decoration: none;
@@ -247,7 +247,6 @@ footer a {
 }
 footer .copyright {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   border-top: 1px solid lightgray;
   padding-top: 20px;
@@ -255,7 +254,7 @@ footer .copyright {
   flex-wrap: wrap;
 }
 footer #logo {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 footer img {
   border-radius: 10px;

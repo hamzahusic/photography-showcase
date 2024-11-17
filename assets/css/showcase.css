@@ -28,3 +28,15 @@
     border-radius: 20px;
     border: 1px dashed #aaaaaa;
 }
+
+#logo p{
+    position: relative;
+    top: 8px;
+}
+.mobile-menu-links {
+    bottom: -235px;
+}
+.mobile-menu-links #register{
+    background-color: white;
+    color: black;
+}

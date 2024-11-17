@@ -33,3 +33,17 @@ nav{
         gap: 15px;
     }
 }
+
+#logo p{
+    position: relative;
+    top: 8px;
+}
+
+.mobile-menu-links {
+    bottom: -235px;
+}
+
+.mobile-menu-links #register{
+    background-color: white;
+    color: black;
+}
