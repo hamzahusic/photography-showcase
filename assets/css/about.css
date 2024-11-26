@@ -1,0 +1,61 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+.title h2{
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+#register{
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+  
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+tr:hover {
+    background-color: #52AFA2;
+    color: white;
+}
+
+.empower{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../images/pexels-jefriwibawa-1387037.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 120px 20px;
+    font-size: 1.3rem;
+    color: white;
+    margin: 40px 0;
+}
+.empower h2{
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 500px) {
+    .empower{
+        font-size: 1.5rem;
+    }
+  }
+
+#logo p{
+    position: relative;
+    top: 0px;
+}
+
+.mobile-menu-links #register{
+    background-color: white;
+    color: black;
+}

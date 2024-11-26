@@ -1,0 +1,42 @@
+.home-gallery h2{
+    font-size: 2.4rem !important;
+    font-weight: bold;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.options p{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.options span{
+    font-weight: lighter !important;
+}
+#div1 {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px dashed #aaaaaa;
+}
+
+#logo p{
+    position: relative;
+    top: 8px;
+}
+.mobile-menu-links {
+    bottom: -235px;
+}
+.mobile-menu-links #register{
+    background-color: white;
+    color: black;
+}
