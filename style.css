@@ -260,7 +260,7 @@ footer img {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   header {
     height: 400px;
   }
@@ -294,4 +294,80 @@ footer img {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+.interactive-galery {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.interactive-galery .interactive-galery-details {
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  animation: show_modal 1s ease;
+}
+.interactive-galery .interactive-galery-details img {
+  max-width: 387px;
+  max-height: 580px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.interactive-galery .interactive-galery-details .interactive-galery-options {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.interactive-galery .interactive-galery-details .interactive-galery-options button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.interactive-galery .interactive-galery-details .interactive-galery-options .interactive-galery-profile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 400;
+}
+.interactive-galery .interactive-galery-details .interactive-galery-options .interactive-galery-profile img {
+  max-width: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+@keyframes show_modal {
+  0% {
+    position: relative;
+    bottom: 50px;
+    opacity: 0.2;
+  }
+  100% {
+    bottom: -50px;
+    opacity: 1;
+  }
+}
+.gallery-download button {
+  background-color: #52AFA2;
+  border: none;
+  margin-top: 10px;
+  padding: 10px 25px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
