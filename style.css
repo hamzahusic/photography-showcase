@@ -370,4 +370,26 @@ footer img {
   border-radius: 20px;
   color: white;
   font-weight: 600;
+}
+
+ul li {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+#toggle-content {
+  background-color: rgba(223, 220, 220, 0.3);
+  padding: 10px;
+  margin-top: 10px;
+  display: none;
+  border-radius: 5px;
+}
+
+.toggle-title {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
