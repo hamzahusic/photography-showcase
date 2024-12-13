@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../assets/css/login.css">
     <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
@@ -34,7 +34,7 @@
             <a href="./register.html" id="register" target="_blank">Register</a>
         </div>
     </nav>
-    <form style="max-width: 500px; margin: 0 auto; padding: 50px 20px;" id="login_form" class="was-validated">
+    <form style="max-width: 500px; margin: 0 auto; padding: 50px 20px;" id="login_form" class="was-validated" method="POST" action="https://jsonplaceholder.typicode.com/posts">
       <div class="form-group mb-3">
         <label for="login_email">Email address</label>
         <input type="email" class="form-control mt-2" name="email" id="login_email" aria-describedby="emailHelp" placeholder="Enter email" required>
@@ -81,6 +81,7 @@
       </div>
   </footer>
     <script src="../app.js"></script>
-    <script src="../assets/js/form_validate.js"></script>
+    <script src="../assets/js/login_validate.js"></script>
+    <script src="../assets/js/validate.js"></script>
 </body>
 </html>

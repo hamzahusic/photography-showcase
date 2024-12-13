@@ -394,6 +394,6 @@ ul li {
   align-items: center;
 }
 
-#login_message, #password_message {
+#login_message, #password_message, #name_indicator, #email_indicator, #password_indicator {
   color: #dc3545;
 }/*# sourceMappingURL=style.css.map */
