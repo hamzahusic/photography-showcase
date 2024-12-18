@@ -1,12 +1,28 @@
+:root {
+    --bg-color: white;
+    --text-color: #282C35;
+    --header-text-color:white;
+}
+
+[data-theme="dark"] {
+    --bg-color: #282C35;
+    --text-color: white;
+    --header-text-color:#282C35;
+}
+
+body{
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
 nav{
-    color: black;
+    color: var(--text-color);
     a{
-        color: black;
+        color: var(--text-color);
     }
     #register{
         background-color: #52AFA2;
-        color: black;
-        color: white;
+        color: var(--text-color);
         padding: 10px 15px;
         border-radius: 10px;
     }
@@ -44,6 +60,6 @@ nav{
 }
 
 .mobile-menu-links #register{
-    background-color: white;
-    color: black;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }

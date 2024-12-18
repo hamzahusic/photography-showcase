@@ -1,8 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --bg-color: white;
+  --text-color: #282C35;
+  --header-text-color:white;
+  --header-bg: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./assets/pexels-garrettmorrow-736414.jpg");
+}
+
+[data-theme=dark] {
+  --bg-color: #282C35;
+  --text-color: white;
+  --header-text-color:#282C35;
+  --header-bg: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./assets/pexels-fotios-photos-1252983.jpg");
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .wrapper {
@@ -25,11 +52,11 @@ nav {
   align-items: center;
   padding: 15px 10px;
   font-size: 18px;
-  color: white;
+  color: var(--header-text-color);
 }
 nav a {
   text-decoration: none;
-  color: white;
+  color: var(--header-text-color);
 }
 nav img {
   border-radius: 10px;
@@ -39,7 +66,7 @@ nav img {
   position: absolute;
   background-color: #52AFA2;
   padding: 20px;
-  bottom: -210px;
+  bottom: -265px;
   border-radius: 10px;
   left: 0;
   right: 0;
@@ -63,14 +90,13 @@ nav img {
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/pexels-garrettmorrow-736414.jpg");
+  background: var(--header-bg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: rgb(0, 0, 0);
   height: 500px;
-  background-color: black;
 }
 header h1 {
   color: white;
@@ -85,7 +111,7 @@ header .header-input h1 {
   text-align: center;
 }
 header .header-input .search-bar {
-  background-color: white;
+  background-color: var(--header-text-color);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -101,6 +127,8 @@ header .header-input .search-bar input {
   outline: none;
   font-size: 16px;
   border: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 header .header-input .search-bar img {
   cursor: pointer;
@@ -113,8 +141,8 @@ header .header-main {
   padding: 0 10px;
 }
 header #register {
-  background-color: white;
-  color: black;
+  background-color: var(--header-text-color);
+  color: var(--text-color);
   padding: 10px 15px;
   border-radius: 10px;
 }
@@ -133,12 +161,12 @@ header #register:hover {
 }
 .filters a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   font-size: 18px;
 }
 .filters .active-filter {
-  background-color: black;
-  color: white;
+  background-color: var(--text-color);
+  color: var(--header-text-color);
   padding: 10px 20px;
   border-radius: 20px;
 }
@@ -162,9 +190,6 @@ header #register:hover {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 500px;
   gap: 20px;
-  /*.img-container:nth-child(even){
-      height: 50%;
-  }*/
 }
 .gallery .img-container {
   position: relative;
@@ -315,7 +340,7 @@ footer img {
 }
 .interactive-galery .interactive-galery-details img {
   max-width: 387px;
-  max-height: 580px;
+  max-height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -336,6 +361,7 @@ footer img {
   align-items: center;
   gap: 5px;
   font-weight: 400;
+  color: #282C35;
 }
 .interactive-galery .interactive-galery-details .interactive-galery-options .interactive-galery-profile img {
   max-width: 40px;
@@ -396,4 +422,18 @@ ul li {
 
 #login_message, #password_message, #name_indicator, #email_indicator, #password_indicator {
   color: #dc3545;
+}
+
+#theme-switch {
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  max-width: 50px;
+  margin: 0 auto;
+}
+
+#theme-switch img {
+  mix-blend-mode: multiply;
+  background-color: white;
+  padding: 10px 11px 8px 11px;
 }/*# sourceMappingURL=style.css.map */
