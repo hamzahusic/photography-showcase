@@ -31,6 +31,6 @@ const loadPosts = async () => {
         `
         gallery.appendChild(img_container)
     });
-    
+    initializeGalleryEvents()
 }
 loadPosts()

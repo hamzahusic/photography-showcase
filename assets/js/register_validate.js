@@ -36,7 +36,7 @@ register_form.addEventListener("submit",(e)=>{
         return
     }
     
-    
+    showNotification("Successfully created account!","User doesn't exists","success")
 })
 
 const password = document.getElementById('validPassword')

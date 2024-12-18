@@ -442,3 +442,37 @@ ul li{
     background-color: white;
     padding: 10px 11px 8px 11px;
 }
+
+.notification{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+    position: fixed;
+    top: 55px;
+    right: 20px;
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    box-shadow: 1px 1px 1px var(--text-color);
+    animation: show_toaster 0.5s ease-in-out 1;
+}
+
+#s_notification{
+    color: #5cb85c;
+    margin-bottom: 0;
+}
+#f_notification{
+    color: #d9534f;
+    margin-bottom: 0;
+}
+
+@keyframes show_toaster {
+    from{
+        right: 100px;
+    }
+    to{
+        right: 20px;
+    }
+}
