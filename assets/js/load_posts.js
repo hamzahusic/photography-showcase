@@ -9,6 +9,7 @@ const loadPosts = async () => {
         
         let img_container = document.createElement('div')
         img_container.classList.add("img-container")
+        img_container.setAttribute("data-id",post.id)
 
         img_container.innerHTML = `
             <div class="img-overlay">
