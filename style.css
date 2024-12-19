@@ -474,12 +474,12 @@ ul li {
 }
 .view-more-container {
   width: 100%;
-  padding: 20px;
+  margin-top: 20px;
 }
 
-.view-more-container img {
+.view-more-container > img {
   display: block;
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -487,6 +487,9 @@ ul li {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .view-more-buttons {
@@ -559,12 +562,16 @@ ul li {
   border: 2px dashed var(--text-color);
   padding: 20px;
   border-radius: 20px;
-  margin-top: 40px;
+  margin: 40px 20px 20px 20px;
 }
 
 .fetched_images div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
 }
 
 .fetched_images p {
@@ -572,4 +579,79 @@ ul li {
   margin-bottom: 15px;
   text-align: center;
   font-weight: 500;
+}
+
+.interactive-galery-edit-remove {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+#edit, #remove {
+  padding: 7px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#edit {
+  background-color: #0275d8;
+  color: white;
+}
+
+#remove {
+  background-color: #dc3545;
+  color: white;
+}
+
+.edit-post {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.edit-post .edit-post-details {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  animation: show_modal 1s ease;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.edit-post .edit-post-details input {
+  padding: 10px;
+  outline: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #282C35;
+}
+.edit-post .edit-post-details img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.edit-post .edit-post-details button {
+  background-color: #52AFA2;
+  color: white;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#edit-post-close {
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+  margin-left: auto;
 }/*# sourceMappingURL=style.css.map */

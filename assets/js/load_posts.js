@@ -20,7 +20,7 @@ const loadPosts = async () => {
                 <div class="profile-info-action">
                     <div>
                         <img src="${isNotHomePage ? "." : ""}${post.profile_img}" id="profile-img" alt="profile picture">
-                        <p>${post.first_name} ${post.last_name}</p>
+                        <p id="author">${post.first_name} ${post.last_name}</p>
                     </div>
                     <button>
                         <img src="${isNotHomePage ? "." : ""}./assets/downloads.png" alt="download icon" width="20">

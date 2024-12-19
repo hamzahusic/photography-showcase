@@ -55,6 +55,10 @@
                 </div>
                 <button id="close-gallery">X</button>
             </div>
+            <div class="interactive-galery-edit-remove">
+                <button id="edit">Edit</button>
+                <button id="remove">Delete</button>
+            </div>
             <img src="./images/pexels-kovyrina-20875591.jpg" alt="Image by creators">
             <div class="gallery-download">
                 <button>
@@ -66,6 +70,18 @@
                 <a href="./pages/viewmore.html" id="view_more">View More</a>
             </div>
         </div>
+    </div>
+    <div class="edit-post">
+            <form action="#" class="edit-post-details">
+                <span id="edit-post-close">X</span>
+                <label for="first_name">Author first name:</label>
+                <input type="text" name="first_name" id="first_name">
+                <label for="last_name">Author last name:</label>
+                <input type="text" name="last_name" id="last_name">
+                <label>Image preview</label>
+                <img src="./images/pexels-fermin-rodriguez-penelas-319786-13198310.jpg" alt="Image preview" width="200px" id="post-preview"/>
+                <button>Save change</button>
+            </form>
     </div>
     <section>
         <div class="filters">
@@ -112,5 +128,7 @@
     <script src="./assets/js/gallery.js"></script>
     <script src="./assets/js/load_posts.js"></script>
     <script src="./assets/js/theme.js"></script>
+    <script src="./assets/js/edit_and_remove.js"></script>
+    <script src="./assets/js/notification.js"></script>
 </body>
 </html>

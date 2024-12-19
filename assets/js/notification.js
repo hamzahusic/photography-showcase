@@ -1,5 +1,4 @@
 const showNotification = (s_message,f_message,state) => {
-    console.log("Notification")
     const notification = document.createElement('div')
     notification.classList.add("notification")
 
