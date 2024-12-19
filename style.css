@@ -553,4 +553,22 @@ ul li {
 
 #bold {
   font-weight: bold;
+}
+
+.fetched_images {
+  border: 1px dashed var(--text-color);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+.fetched_images div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fetched_images p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

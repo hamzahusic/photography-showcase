@@ -22,7 +22,7 @@ const loadPost = async () => {
     }
 
     view_more_container.innerHTML = `
-    <div class="view-more-options">
+            <div class="view-more-options">
                 <div class="view-more-profile">
                     <img src=".${post.profile_img}" alt="Profile picture" width="50px" height="50px">
                     <div class="view-more-profile-name">
@@ -48,5 +48,27 @@ const loadPost = async () => {
             <img src=".${post.post_img}" alt="view more image">
             `
 
+    const image_request = await fetch('https://picsum.photos/v2/list?limit=5')
+    const image_list = await image_request.json()
+
+    const image_container = document.createElement('div')
+    const image_container_title = document.createElement('p')
+    const image_container_images = document.createElement('div')
+
+    image_container_title.innerText = "External source images"
+    image_container.appendChild(image_container_title)
+    image_container.appendChild(image_container_images)
+    image_container.classList.add('fetched_images')
+
+    image_list.forEach((image) => {
+        const image_path = image.download_url.split("/5000/3333")
+        image_container_images.innerHTML+=`
+            <img src="${image_path[0]+'/220/300'}" alt="External source image">
+        `
+    })
+
+    view_more_container.appendChild(image_container)
+    
 }
 loadPost()
+
