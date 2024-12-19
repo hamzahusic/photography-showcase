@@ -38,7 +38,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .options p{
@@ -64,9 +63,7 @@ nav {
     position: relative;
     top: 8px;
 }
-.mobile-menu-links {
-    bottom: -235px;
-}
+
 .mobile-menu-links #register{
     background-color: white;
     color: black;

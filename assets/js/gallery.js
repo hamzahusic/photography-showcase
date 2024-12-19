@@ -10,32 +10,46 @@ const initializeGalleryEvents = () => {
     })
     
     const setGalleryValues = (img,name,profileImage,post_id,post) => {
-        interactiveGalleryDetails.children[1].src = img
-        interactiveGalleryDetails.children[0].children[0].children[1].textContent = name
-        interactiveGalleryDetails.children[0].children[0].children[0].src = profileImage
+        document.querySelector("#interactive_author_image").src = img
+        document.querySelector("#interactive_author_name").textContent = name
+        document.querySelector("#profile-img").src = profileImage
         
         document.getElementById('view_more').setAttribute('href',`/pages/viewmore.html?id=${post_id}`)
-        document.getElementById('remove').onclick = () => {
-            removePost(post) 
-            closeGallery.click()
-            showNotification("Successfully removed post!","","success")
+
+        try {
+            document.getElementById('remove').onclick = () => {
+                removePost(post) 
+                closeGallery.click()
+                showNotification("Successfully removed post!","","success")
+            }
+        } catch (error) {
+            showNotification("","Error while trying to remove post!","failed")
         }
         
-        document.querySelector('.edit-post-details').onsubmit = (e) => {
-            saveEditPost(e,post)
-            editPostModal.style.display = "none"
-            showNotification("Successfully updated post!","","success")
+        try {
+            document.querySelector('.edit-post-details').onsubmit = (e) => {
+                saveEditPost(e,post)
+                editPostModal.style.display = "none"
+                showNotification("Successfully updated post!","","success")
+            }
+        } catch (error) {
+            showNotification("","Error while trying to update post!","failed")
         }
         
         document.querySelector("#edit-post-close").onclick = () => {
             editPostModal.style.display = "none"
         }
-
-        document.getElementById('edit').onclick = () => {
-            closeGallery.click()
-            loadEditPost(name.split(" ")[0],name.split(" ")[1],img)
-            editPostModal.style.display = "flex"
+        
+        try {
+            document.getElementById('edit').onclick = () => {
+                closeGallery.click()
+                loadEditPost(name.split(" ")[0],name.split(" ")[1],img)
+                editPostModal.style.display = "flex"
+            }
+        } catch (error) {
+            showNotification("","Error while trying to load data for edit!","failed")
         }
+
         interactiveGallery.style.display = "flex"
     }
     

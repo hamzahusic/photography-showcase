@@ -55,10 +55,6 @@ nav{
     top: 8px;
 }
 
-.mobile-menu-links {
-    bottom: -235px;
-}
-
 .mobile-menu-links #register{
     background-color: var(--bg-color);
     color: var(--text-color);

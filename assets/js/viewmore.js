@@ -49,7 +49,7 @@ const loadPost = async () => {
             `
 
     try {
-        const image_request = await fetch('https://picsum.photos/v2/list?limit=5')
+        const image_request = await fetch('https://picsum.photos/v2/list?limit=4')
         const image_list = await image_request.json()
         const image_container = document.createElement('div')
         const image_container_title = document.createElement('p')

@@ -3,6 +3,7 @@ const form_name = document.getElementById("fullname")
 const name_indicator = document.getElementById("name_indicator")
 const register_email = document.getElementById("register_email")
 const email_indicator = document.getElementById("email_indicator")
+const password = document.getElementById('validPassword')
 
 register_form.addEventListener("submit",(e)=>{
     e.preventDefault()
@@ -35,11 +36,13 @@ register_form.addEventListener("submit",(e)=>{
     if(!hasValidTLD(email_domain,email_indicator,"validEmail")){
         return
     }
-    
+
+    if(password.value.length < 8){
+        showNotification("","Password must have at least eight characters!","failed")
+        return
+    }
     showNotification("Successfully created account!","User doesn't exists","success")
 })
-
-const password = document.getElementById('validPassword')
 
 function checkPasswordStrength(){
     const hasNumber = /\d/

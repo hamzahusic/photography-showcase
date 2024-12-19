@@ -66,7 +66,7 @@ nav img {
   position: absolute;
   background-color: #52AFA2;
   padding: 20px;
-  bottom: -265px;
+  bottom: -280px;
   border-radius: 10px;
   left: 0;
   right: 0;
@@ -285,41 +285,6 @@ footer img {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 600px) {
-  header {
-    height: 400px;
-  }
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 850px) {
-  header {
-    height: 550px;
-  }
-  header .nav-links {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  header .header-input h1 {
-    font-size: 40px;
-    text-align: center;
-  }
-  header .header-input .search-bar input {
-    font-size: 20px;
-  }
-  #menu-btn {
-    display: none;
-    align-self: center;
-  }
-  .mobile-menu-links {
-    display: none;
-  }
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 .interactive-galery {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -487,7 +452,7 @@ ul li {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
-  padding: 0 20px;
+  padding: 0 10px;
   flex-wrap: wrap;
   row-gap: 20px;
 }
@@ -567,7 +532,8 @@ ul li {
 
 .fetched_images div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   -moz-column-gap: 10px;
        column-gap: 10px;
@@ -628,6 +594,9 @@ ul li {
   flex-direction: column;
   gap: 5px;
 }
+.edit-post .edit-post-details label, .edit-post .edit-post-details span {
+  color: #282C35;
+}
 .edit-post .edit-post-details input {
   padding: 10px;
   outline: none;
@@ -654,4 +623,46 @@ ul li {
   font-size: 20px;
   display: block;
   margin-left: auto;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    height: 400px;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .view-more-options {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 850px) {
+  header {
+    height: 550px;
+  }
+  header .nav-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  header .header-input h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  header .header-input .search-bar input {
+    font-size: 20px;
+  }
+  #menu-btn {
+    display: none;
+    align-self: center;
+  }
+  .mobile-menu-links {
+    display: none;
+  }
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .fetched_images div {
+    justify-content: start;
+  }
 }/*# sourceMappingURL=style.css.map */
