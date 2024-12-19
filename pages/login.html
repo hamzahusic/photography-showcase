@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../assets/css/login.css">
     <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
@@ -24,6 +24,9 @@
             <a href="./license.html" target="_blank">License</a>
             <a href="./login.html" target="_blank">Login</a>
             <a href="./register.html" id="register" target="_blank">Register</a>
+            <button id="theme-switch">
+                <img src="../assets/dark-light-theme-icon.png" alt="dark-light-mode-icon" width="47px" height="44px">
+            </button>
         </div>
         <img src="../assets/menu-black.png" alt="menu icon" id="menu-btn">
         <div class="mobile-menu-links">
@@ -32,19 +35,23 @@
             <a href="./license.html" target="_blank">License</a>
             <a href="./login.html" target="_blank">Login</a>
             <a href="./register.html" id="register" target="_blank">Register</a>
+            <button id="theme-switch">
+                <img src="../assets/dark-light-theme-icon.png" alt="dark-light-mode-icon" width="47px" height="44px">
+            </button>
         </div>
     </nav>
-    <form style="max-width: 500px; margin: 0 auto; padding: 50px 20px;" method="POST" action="https://jsonplaceholder.typicode.com/posts" class="was-validated">
+    <form style="max-width: 500px; margin: 0 auto; padding: 50px 20px;" id="login_form" class="was-validated" method="POST" action="https://jsonplaceholder.typicode.com/posts">
       <div class="form-group mb-3">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control mt-2" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-        <small id="emailHelp" class="form-text valid-feedback">We'll never share your email with anyone else.</small>
+        <label for="login_email">Email address</label>
+        <input type="email" class="form-control mt-2" name="email" id="login_email" aria-describedby="emailHelp" placeholder="Enter email" required>
+        <small id="validEmail" class="form-text valid-feedback">We'll never share your email with anyone else.</small>
         <small id="emailHelp" class="form-text invalid-feedback">Please provide valid email</small>
-      </div>
-      <div class="form-group mb-3">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control mt-2" name="password" id="exampleInputPassword1" placeholder="Password" required>
-      </div>
+        <p id="login_message" class="form-text"></p>
+    </div>
+    <div class="form-group mb-3">
+        <label for="login_password">Password</label>
+        <input type="password" class="form-control mt-2" name="password" id="login_password" placeholder="Password" required>
+    </div>
       <div class="form-group form-check mb-3">
         <input type="checkbox" class="form-check-input" id="exampleCheck1" name="keep_logged_in">
         <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
@@ -80,5 +87,9 @@
       </div>
   </footer>
     <script src="../app.js"></script>
+    <script src="../assets/js/login_validate.js"></script>
+    <script src="../assets/js/validate.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/notification.js"></script>
 </body>
 </html>

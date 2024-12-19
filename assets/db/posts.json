@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "first_name" : "John",
+        "last_name" : "Doe",
+        "profile_img" : "./assets/profile.jpg",
+        "post_img" : "./images/building.jpeg",
+        "like":13,
+        "collect":25
+    },
+    {
+        "id":2,
+        "first_name" : "Jack",
+        "last_name" : "Doe",
+        "profile_img" : "./assets/profile.jpg",
+        "post_img" : "./images/pexels-ioanamtc-7521429.jpg",
+        "like":15,
+        "collect":30
+    },
+    {
+        "id":3,
+        "first_name" : "Jason",
+        "last_name" : "Doe",
+        "profile_img" : "./assets/profile.jpg",
+        "post_img" : "./images/pexels-gsn-travel-28670264.jpg",
+        "like":22,
+        "collect":0
+    },
+    {
+        "id":4,
+        "first_name" : "Jamal",
+        "last_name" : "Doe",
+        "profile_img" : "./assets/profile.jpg",
+        "post_img" : "./images/pexels-skylake-27915654.jpg",
+        "like":25,
+        "collect":45
+    },
+    {
+        "id":5,
+        "first_name" : "Adam",
+        "last_name" : "Sandler",
+        "profile_img" : "./assets/profile.jpg",
+        "post_img" : "./images/pexels-faruktokluoglu-27659136.jpg",
+        "like":30,
+        "collect":100
+    },
+    {
+        "id":6,
+        "first_name" : "Jennifer",
+        "last_name" : "Sandler",
+        "profile_img" : "./assets/profile.jpg",
+        "post_img" : "./images/pexels-iitsbruna-29100004.jpg",
+        "like":35,
+        "collect":32
+    },
+    {
+        "id":7,
+        "first_name" : "Harrison",
+        "last_name" : "Sandler",
+        "profile_img" : "./assets/profile.jpg",
+        "post_img" : "./images/pexels-kovyrina-20875591.jpg",
+        "like":17,
+        "collect":17
+    },
+    {
+        "id":8,
+        "first_name" : "Barak",
+        "last_name" : "Obama",
+        "profile_img" : "./assets/profile.jpg",
+        "post_img" : "./images/pexels-willy-mendez-1669648805-29159338.jpg",
+        "like":50,
+        "collect":13
+    }
+]

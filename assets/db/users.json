@@ -1,0 +1,20 @@
+[
+    {
+        "first_name" : "John",
+        "last_name" : "Doe",
+        "email" : "john.doe@stu.ibu.edu.ba",
+        "password" : "sifra123"
+    },
+    {
+        "first_name" : "Jack",
+        "last_name" : "Doe",
+        "email" : "jack.doe@stu.ibu.edu.ba",
+        "password" : "123sifra"
+    },
+    {
+        "first_name" : "Hamza",
+        "last_name" : "Husic",
+        "email" : "hamza.husic@stu.ibu.edu.ba",
+        "password" : "123"
+    }
+]
