@@ -502,8 +502,8 @@ ul li {
   align-items: center;
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: white;
+  color: #282C35;
   border: 1px solid var(--text-color);
   cursor: pointer;
 }
