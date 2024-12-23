@@ -22,6 +22,9 @@
             <a href="./license.html" target="_blank">License</a>
             <a href="./login.html" target="_blank">Login</a>
             <a href="./register.html" id="register" target="_blank">Register</a>
+            <button id="theme-switch">
+                <img src="../assets/dark-light-theme-icon.png" alt="dark-light-mode-icon" width="25px" height="25px">
+            </button>
         </div>
         <img src="../assets/menu-black.png" alt="menu icon" id="menu-btn">
         <div class="mobile-menu-links">
@@ -30,6 +33,9 @@
             <a href="./license.html" target="_blank">License</a>
             <a href="./login.html" target="_blank">Login</a>
             <a href="./register.html" id="register" target="_blank">Register</a>
+            <button id="theme-switch">
+                <img src="../assets/dark-light-theme-icon.png" alt="dark-light-mode-icon" width="25px" height="25px">
+            </button>
         </div>
     </nav>
     <div class="title">
@@ -40,19 +46,84 @@
     <section class="wrapper allowed">
         <h3>What is allowed? 👌</h3>
         <ul>
-            <div><li>All photos are free to use.</li></div>
-            <li>Attribution is not required. Giving credit to the photographers is not necessary but always appreciated.</li>
-            <li>You can modify the photos. Be creative and edit them as you like.</li>
+            <li class="toggle-element">
+                <div class="toggle-title">
+                    <p>Are the photos completely free to use? </p>
+                    <img id="arrow-icon" src="../assets/arrow-down.png" alt="arrow down icon" width="15px">
+                </div>
+                <p id="toggle-content">
+                    All photos are free to use.
+                </p>
+            </li>
+            <li class="toggle-element">
+                <div class="toggle-title">
+                    <p>Is attribution mandatory when using the photos?</p>
+                    <img id="arrow-icon" src="../assets/arrow-down.png" alt="arrow down icon" width="15px">
+                </div>
+                <p id="toggle-content">
+                    Attribution is not required. Giving credit to the photographers is not necessary but always appreciated.
+                </p>
+            </li>
+            <li class="toggle-element">
+                <div class="toggle-title">
+                    <p>Can I edit or modify the photos?</p>
+                    <img id="arrow-icon" src="../assets/arrow-down.png" alt="arrow down icon" width="15px">
+                </div>
+                <p id="toggle-content">
+                    You can modify the photos. Be creative and edit them as you like.
+                </p>
+            </li>
+            
         </ul>
     </section>
     <section class="wrapper not-allowed">
         <h3>What is not allowed? 👎</h3>
         <ul>
-            <li>Identifiable people may not appear in a bad light or in a way that is offensive.</li>
-            <li>Don't sell unaltered copies of a photo, e.g. as a poster, print or on a physical product without modifying it first.</li>
-            <li>Don't imply endorsement of your product by people or brands on the imagery.</li>
-            <li>Don't redistribute or sell the photos on other stock photo or wallpaper platforms.</li>
-            <li>Don't use the photos as part of your trade-mark, design-mark, trade-name, business name or service mark.</li>
+            <li class="toggle-element">
+                <div class="toggle-title">
+                    <p>Can I use photos of identifiable people in any context?</p>
+                    <img id="arrow-icon" src="../assets/arrow-down.png" alt="arrow down icon" width="15px">
+                </div>
+                <p id="toggle-content">
+                    Identifiable people may not appear in a bad light or in a way that is offensive.
+                </p>
+            </li>
+            <li class="toggle-element">
+                <div class="toggle-title">
+                    <p>Is it allowed to sell unaltered copies of the photos?</p>
+                    <img id="arrow-icon" src="../assets/arrow-down.png" alt="arrow down icon" width="15px">
+                </div>
+                <p id="toggle-content">
+                    Don't sell unaltered copies of a photo, e.g. as a poster, print or on a physical product without modifying it first.
+                </p>
+            </li>
+            <li class="toggle-element">
+                <div class="toggle-title">
+                    <p>Can I imply endorsement of my product by people or brands in the photos?</p>
+                    <img id="arrow-icon" src="../assets/arrow-down.png" alt="arrow down icon" width="15px">
+                </div>
+                <p id="toggle-content">
+                    Don't imply endorsement of your product by people or brands on the imagery.
+                </p>
+            </li>
+            <li class="toggle-element">
+                <div class="toggle-title">
+                    <p>What are the rules for modifying photos before selling them?</p>
+                    <img id="arrow-icon" src="../assets/arrow-down.png" alt="arrow down icon" width="15px">
+                </div>
+                <p id="toggle-content">
+                    Don't redistribute or sell the photos on other stock photo or wallpaper platforms.
+                </p>
+            </li>
+            <li class="toggle-element">
+                <div class="toggle-title">
+                    <p>Can I use the photos as part of my trademark or business branding?</p>
+                    <img id="arrow-icon" src="../assets/arrow-down.png" alt="arrow down icon" width="15px">
+                </div>
+                <p id="toggle-content">
+                    Don't use the photos as part of your trade-mark, design-mark, trade-name, business name or service mark.
+                </p>
+            </li>
         </ul>
     </section>
     <footer>
@@ -84,5 +155,7 @@
         </div>
     </footer>
     <script src="../app.js"></script>
+    <script src="../assets/js/license.js"></script>
+    <script src="../assets/js/theme.js"></script>
 </body>
 </html>

@@ -24,6 +24,9 @@
             <a href="./license.html" target="_blank">License</a>
             <a href="./login.html" target="_blank">Login</a>
             <a href="./register.html" id="register" target="_blank">Register</a>
+            <button id="theme-switch">
+                <img src="../assets/dark-light-theme-icon.png" alt="dark-light-mode-icon" width="47px" height="44px">
+            </button>
         </div>
         <img src="../assets/menu-black.png" alt="menu icon" id="menu-btn">
         <div class="mobile-menu-links">
@@ -32,23 +35,63 @@
             <a href="./license.html" target="_blank">License</a>
             <a href="./login.html" target="_blank">Login</a>
             <a href="./register.html" id="register" target="_blank">Register</a>
+            <button id="theme-switch">
+                <img src="../assets/dark-light-theme-icon.png" alt="dark-light-mode-icon" width="47px" height="44px">
+            </button>
         </div>
     </nav>
+    <div class="interactive-galery">
+        <div class="interactive-galery-details">
+            <div class="interactive-galery-options">
+                <div class="interactive-galery-profile">
+                    <img src="" id="profile-img" alt="profile picture">
+                    <p id="interactive_author_name">Default Name</p>
+                </div>
+                <button id="close-gallery">X</button>
+            </div>
+            <div class="interactive-galery-edit-remove">
+                <button id="edit">Edit</button>
+                <button id="remove">Delete</button>
+            </div>
+            <img src="" alt="Image by creators" id="interactive_author_image">
+            <div class="gallery-download">
+                <button>
+                    <img src="../assets/downloads.png" alt="download icon" width="20">
+                   Download 
+                </button>
+            </div>
+            <div>
+                <a href="./pages/viewmore.html" id="view_more">View More</a>
+            </div>
+        </div>
+    </div>
+    <div class="edit-post">
+        <form action="#" class="edit-post-details">
+            <span id="edit-post-close">X</span>
+            <label for="first_name">Author first name:</label>
+            <input type="text" name="first_name" id="first_name">
+            <label for="last_name">Author last name:</label>
+            <input type="text" name="last_name" id="last_name">
+            <label>Image preview</label>
+            <img src="" alt="Image preview" width="200px" id="post-preview"/>
+            <button>Save change</button>
+        </form>
+    </div>
     <section class="wrapper">
         <div class="wrapper home-gallery">
             <div class="d-grid gap-1 gap-2-lg d-md-block mb-5">
-                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2">computer</button>
-                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2">party</button>
-                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2">backgrounds</button>
-                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2">success</button>
-                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2">person</button>
-                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2">crowd</button>
+                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2" id="category">computer</button>
+                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2" id="category">party</button>
+                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2" id="category">backgrounds</button>
+                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2" id="category">success</button>
+                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2" id="category">person</button>
+                <button type="button" class="btn btn-outline-dark px-5 py-3 me-2 mb-2" id="category">crowd</button>
             </div>
             <h2>Newest photography showcase</h2>
             <div class="options">
                 <p>Photos <span>576.7K</span></p>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-dark upload-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-dark upload-btn" id="upload" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Upload photo +
                 </button>
                 
@@ -80,215 +123,6 @@
                 </div>
             </div>
             <div class="gallery">
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-sliceisop-24827280.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-interwebly-27902258.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-fermin-rodriguez-penelas-319786-13198310.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-ioanamtc-7521429.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-kovyrina-20875591.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-willy-mendez-1669648805-29159338.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-gsn-travel-28670264.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-skylake-27915654.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-faruktokluoglu-27659136.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/pexels-iitsbruna-29100004.jpg" alt="Image by creators">
-                </div>
-                <div class="img-container">
-                    <div class="img-overlay">
-                        <div class="action-icons">
-                            <img src="../assets/bookmark.png" alt="save icon">
-                            <img src="../assets/heart.png" alt="like icon">
-                        </div>
-                        <div class="profile-info-action">
-                            <div>
-                                <img src="../assets/profile.jpg" id="profile-img" alt="profile picture">
-                                <p>John Doe</p>
-                            </div>
-                            <button>
-                                <img src="../assets/downloads.png" alt="download icon" width="20">
-                               Download 
-                            </button>
-                        </div>
-                    </div>
-                    <img src="../images/building.jpeg" alt="Image by creators">
-                </div>
             </div>
         </div>
     </section>
@@ -337,5 +171,10 @@
         </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../app.js"></script>
+    <script src="../assets/js/gallery.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/load_posts.js"></script>
+    <script src="../assets/js/edit_and_remove.js"></script>
+    <script src="../assets/js/notification.js"></script>
 </body>
 </html>
