@@ -53,38 +53,43 @@ nav{
     align-items: center;
     padding: 15px 10px;
     font-size: 18px;
-    color: var(--header-text-color);
+    color: var(--text-color);
     a{
         text-decoration: none;
-        color: var(--header-text-color);
+        color: var(--text-color);
     }
     img{
         border-radius: 10px;
     }
-}
-.mobile-menu-links{
-    position: absolute;
-    background-color: #52AFA2;
-    padding: 20px;
-    bottom: -280px;
-    border-radius: 10px;
-    left: 0;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    margin: 0 10px;
-    z-index: 999;
-}
-.active{
-    display: flex;
-}
-#menu-btn{
-    width: 30px;
-    cursor: pointer;
-    align-self: center;
-    border-radius: 0px;
+    .mobile-menu-links{
+        position: absolute;
+        background-color: #52AFA2;
+        padding: 20px;
+        bottom: -280px;
+        border-radius: 10px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        margin: 0 10px;
+        z-index: 999;
+    }
+    .active{
+        display: flex;
+    }
+    #menu-btn{
+        width: 30px;
+        cursor: pointer;
+        align-self: center;
+        border-radius: 0px;
+    }
+    .nav-links{
+        display: none;
+        gap:10px;
+        align-items: center;
+    }
 }
 
 header{
@@ -97,11 +102,6 @@ header{
     height: 500px;
     h1{
         color: white;
-    }
-    .nav-links{
-        display: none;
-        gap:10px;
-        align-items: center;
     }
     .header-input{
         h1{
@@ -135,21 +135,20 @@ header{
     .header-main{
         display: grid;
         place-items: start center;
-        margin-top: 100px;
         height: 100%;
-        padding: 0 10px;
+        padding: 160px 10px 0 10px;
     }
-    #register{
-        background-color: var(--header-text-color);
-        color: var(--text-color);
-        padding: 10px 15px;
-        border-radius: 10px;
-    }
-    #register:hover{
-        background-color: rgba(223, 220, 220, 0.4);
-        color: white;
-        transition: all 0.5s;
-    }
+}
+#register{
+    background-color: #52AFA2;
+    color: var(--bg-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+#register:hover{
+    background-color: rgba(223, 220, 220, 0.4);
+    color: white;
+    transition: all 0.5s;
 }
 
 .filters{
@@ -639,12 +638,7 @@ ul li{
 
 @media screen and (min-width: 850px) {
     header{
-        height: 550px;
-        .nav-links{
-            display: flex;
-            gap:10px;
-            align-items: center;
-        }  
+        height: 450px;
         .header-input{
             h1{
                 font-size: 40px;
@@ -656,12 +650,18 @@ ul li{
         }
 
     }
-    #menu-btn{
-        display: none;
-        align-self: center;
-    }
-    .mobile-menu-links{
-        display: none;
+    nav{
+        .nav-links{
+            display: flex;
+            gap:10px;
+            align-items: center;
+        }  
+        #menu-btn{
+            display: none;
+        }
+        .mobile-menu-links{
+            display: none;
+        }
     }
     .gallery{
         grid-template-columns: repeat(3,1fr);
