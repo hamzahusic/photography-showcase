@@ -139,13 +139,13 @@ header{
         padding: 160px 10px 0 10px;
     }
 }
-#register{
+#register-link{
     background-color: #52AFA2;
     color: var(--bg-color);
     padding: 10px 15px;
     border-radius: 10px;
 }
-#register:hover{
+#register-link:hover{
     background-color: rgba(223, 220, 220, 0.4);
     color: white;
     transition: all 0.5s;
@@ -399,7 +399,9 @@ ul li{
 #theme-switch img{
     mix-blend-mode: multiply;
     background-color: white;
-    padding: 10px 11px 8px 11px;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
 }
 
 .notification{

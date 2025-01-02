@@ -13,10 +13,10 @@ const checkUserExits = async (email,password) => {
             return
         }
     })
-    showNotification("Successfully logged in!","Error with creating account",isUser)
+    showNotification("Successfully logged in!","User doesn't exist",isUser)
 }
 
-login_form.addEventListener("submit", (e)=>{
+login_form?.addEventListener("submit", (e)=>{
     e.preventDefault()
 
     document.getElementById("validEmail").classList.replace("invalid-feedback","valid-feedback")

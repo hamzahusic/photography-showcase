@@ -1,7 +1,6 @@
 const initializeGalleryEvents = () => {
     const allShowcaseImages = document.querySelectorAll(".img-container");
     const interactiveGallery = document.getElementsByClassName("interactive-galery")[0]
-    const interactiveGalleryDetails = interactiveGallery.children[0];
     const closeGallery = document.getElementById("close-gallery")
     const editPostModal = document.querySelector(".edit-post")
 

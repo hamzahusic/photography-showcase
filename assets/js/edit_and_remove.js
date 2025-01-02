@@ -1,5 +1,5 @@
 const removePost = (post) => {
-    document.getElementsByClassName("gallery")[0].removeChild(post)
+    document.querySelectorAll(".gallery").forEach(element => element.removeChild(post))
 }
 
 const loadEditPost = (first_name,last_name,image) => {
