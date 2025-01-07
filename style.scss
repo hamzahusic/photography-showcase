@@ -655,7 +655,7 @@ ul li{
     nav{
         .nav-links{
             display: flex;
-            gap:10px;
+            gap:5px;
             align-items: center;
         }  
         #menu-btn{
@@ -671,4 +671,14 @@ ul li{
     .fetched_images div{
         justify-content: start;
     }
+  }
+
+  .nav-links a{
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links a.active-link {
+    background-color: var(--text-color);
+    color: var(--bg-color);
   }
