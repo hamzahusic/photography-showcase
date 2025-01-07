@@ -7,7 +7,7 @@ menu_btn.addEventListener("click", ()=>{
 
 const desktop_menu_links = document.querySelectorAll(".nav-links a")
 const mobile_menu_links = document.querySelectorAll('.mobile-menu-links a')
-const homeLink = document.getElementById("home");
+const homeLink = document.getElementById("home-link");
 
 const updateActiveLink = (menu_links) => {
    menu_links.forEach(link => {
@@ -19,7 +19,8 @@ const updateActiveLink = (menu_links) => {
 }
 
 homeLink.onclick = () => {
-   menu_links.forEach(link => link.classList.remove('active-link'))
+   desktop_menu_links.forEach(link => link.classList.remove('active-link'))
+   mobile_menu_links.forEach(link => link.classList.remove('active-link'))
 } 
 
 updateActiveLink(desktop_menu_links)
