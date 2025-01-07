@@ -111,12 +111,27 @@
                 } catch (error) {
                     console.error("Failed to load script:", error);
                 }
+            },
+            onReady: function (){
+                window.history.pushState({data:"Home page"}, "Home", "/home");
             }
         });
 
         app.route({
             view: "license",
-            onCreate: function() { loadScript('./assets/js/license.js') },
+            onCreate: function() { 
+                loadScript('./assets/js/license.js') 
+            },
+            onReady: function (){
+                window.history.pushState({data:"License page"}, "License", "/license");
+            }
+        });
+
+        app.route({
+            view: "about",
+            onReady: function (){
+                window.history.pushState({data:"About page"}, "About", "/about");
+            }
         });
 
         app.route({
@@ -129,6 +144,9 @@
                 } catch (error) {
                     console.error("Failed to load script:", error);
                 }
+            },
+            onReady: function (){
+                window.history.pushState({data:"Showcase page"}, "Showcase", "/showcase");
             }
         });
 
@@ -141,6 +159,9 @@
                 } catch (error) {
                     console.error("Failed to load script:", error);
                 }
+            },
+            onReady: function (){
+                window.history.pushState({data:"Login page"}, "Login", "/login");
             }
         });
 
@@ -153,6 +174,9 @@
                 } catch (error) {
                     console.error("Failed to load script:", error);
                 }
+            },
+            onReady: function (){
+                window.history.pushState({data:"Register page"}, "Register", "/register");
             }
         });
 

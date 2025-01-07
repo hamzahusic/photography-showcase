@@ -6,10 +6,21 @@ menu_btn.addEventListener("click", ()=>{
 })
 
 const desktop_menu_links = document.querySelectorAll(".nav-links a")
+const mobile_menu_links = document.querySelectorAll('.mobile-menu-links a')
+const homeLink = document.getElementById("home");
 
-desktop_menu_links.forEach(link => {
-   link.onclick = () => {
-      desktop_menu_links.forEach(mlink => mlink.classList.remove('active-link'))
-      link.classList.add('active-link')
-   }
-})
+const updateActiveLink = (menu_links) => {
+   menu_links.forEach(link => {
+      link.onclick = () => {
+         menu_links.forEach(mlink => mlink.classList.remove('active-link'))
+         link.classList.add('active-link')
+      }
+   })
+}
+
+homeLink.onclick = () => {
+   menu_links.forEach(link => link.classList.remove('active-link'))
+} 
+
+updateActiveLink(desktop_menu_links)
+updateActiveLink(mobile_menu_links)
