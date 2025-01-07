@@ -673,4 +673,28 @@ ul li {
 .nav-links a.active-link {
   background-color: var(--text-color);
   color: var(--bg-color);
+}
+
+#welcome_message {
+  padding: 5px 0 0 5px;
+  background-color: #52AFA2;
+  color: var(--bg-color);
+  font-weight: 500;
+  display: none;
+}
+
+#welcome_message_login {
+  font-size: 22px;
+}
+
+#log_out_btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+}
+
+#message_modal {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -23,5 +23,18 @@ homeLink.onclick = () => {
    mobile_menu_links.forEach(link => link.classList.remove('active-link'))
 } 
 
+const checkUserLogin = () => {
+   const data = localStorage.getItem('user')
+   if(data){
+      document.getElementById("welcome_message").innerText = "Welcome back " + data + "!";
+      document.getElementById("welcome_message").style.display = 'block';
+   }
+   else{
+      document.getElementById("welcome_message").innerText = "";
+      document.getElementById("welcome_message").style.display = 'none';
+      window.location.hash = "login"
+   }
+}
+
 updateActiveLink(desktop_menu_links)
 updateActiveLink(mobile_menu_links)

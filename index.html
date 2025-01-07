@@ -19,6 +19,9 @@
 
 </head>
 <body>
+    <div id="welcome_message">
+        Welcome back Hamza!
+    </div>
     <nav class="wrapper">
         <a href="#home" id="home-link">
             <div id="logo">
@@ -114,6 +117,7 @@
             },
             onReady: function (){
                 window.history.pushState({data:"Home page"}, "Home", "/home");
+                checkUserLogin()
             }
         });
 
@@ -124,6 +128,7 @@
             },
             onReady: function (){
                 window.history.pushState({data:"License page"}, "License", "/license");
+                checkUserLogin()
             }
         });
 
@@ -131,6 +136,7 @@
             view: "about",
             onReady: function (){
                 window.history.pushState({data:"About page"}, "About", "/about");
+                checkUserLogin()
             }
         });
 
@@ -147,6 +153,7 @@
             },
             onReady: function (){
                 window.history.pushState({data:"Showcase page"}, "Showcase", "/showcase");
+                checkUserLogin()
             }
         });
 
@@ -162,6 +169,15 @@
             },
             onReady: function (){
                 window.history.pushState({data:"Login page"}, "Login", "/login");
+                const isLogged = localStorage.getItem('user')
+                if(isLogged){
+                    document.getElementById("login_form").style.display = 'none'
+                    document.getElementById('message_modal').style.display = 'block'
+                }
+                else{
+                    document.getElementById("login_form").style.display = 'block'
+                    document.getElementById('message_modal').style.display = 'none' 
+                }
             }
         });
 
