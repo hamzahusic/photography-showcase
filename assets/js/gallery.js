@@ -1,55 +1,65 @@
 const initializeGalleryEvents = () => {
     const allShowcaseImages = document.querySelectorAll(".img-container");
-    const interactiveGallery = document.getElementsByClassName("interactive-galery")[0]
-    const closeGallery = document.getElementById("close-gallery")
-    const editPostModal = document.querySelector(".edit-post")
+    const interactiveGallery = document.querySelectorAll(".interactive-galery")
+    const closeGallery = document.querySelectorAll("#close-gallery")
+    const editPostModal = document.querySelectorAll(".edit-post")
 
-    closeGallery.addEventListener("click",()=>{
-        interactiveGallery.style.display = "none"
+    closeGallery.forEach((close) => {
+        close.addEventListener("click",() => {
+            interactiveGallery.forEach(gallery => gallery.style.display = "none")
+        })
     })
     
     const setGalleryValues = (img,name,profileImage,post_id,post) => {
-        document.querySelector("#interactive_author_image").src = img
-        document.querySelector("#interactive_author_name").textContent = name
-        document.querySelector("#profile-img").src = profileImage
+        document.querySelectorAll("#interactive_author_image").forEach(author_image => author_image.src = img)
+        document.querySelectorAll("#interactive_author_name").forEach(author_name => author_name.textContent = name)
+        document.querySelectorAll("#profile-img").forEach(profile_img => profile_img.src = profileImage)
         
-        document.getElementById('view_more').setAttribute('href',`/pages/viewmore.html?id=${post_id}`)
+        //document.getElementById('view_more').setAttribute('href',`/pages/viewmore.html?id=${post_id}`)
 
         try {
-            document.getElementById('remove').onclick = () => {
-                removePost(post) 
-                closeGallery.click()
-                showNotification("Successfully removed post!","","success")
-            }
+            document.querySelectorAll('#remove').forEach(removeBtn => {
+                removeBtn.onclick = () => {
+                    removePost(post)
+                    closeGallery.forEach(close => close.click())
+                    showNotification("Successfully removed post!","","success")
+                }
+            }) 
         } catch (error) {
             showNotification("","Error while trying to remove post!","failed")
         }
         
         try {
-            document.querySelector('.edit-post-details').onsubmit = (e) => {
-                saveEditPost(e,post)
-                editPostModal.style.display = "none"
-                showNotification("Successfully updated post!","","success")
-            }
+            document.querySelectorAll('.edit-post-details').forEach( editBtn => {
+                editBtn.onsubmit = (e) => {
+                    saveEditPost(e,post)
+                    editPostModal.forEach(editPost => editPost.style.display = "none")
+                    showNotification("Successfully updated post!","","success")
+                }
+            })
         } catch (error) {
             showNotification("","Error while trying to update post!","failed")
         }
         
-        document.querySelector("#edit-post-close").onclick = () => {
-            editPostModal.style.display = "none"
-        }
+        document.querySelectorAll("#edit-post-close").forEach(editCloseBtn => {
+            editCloseBtn.onclick = () => {
+                editPostModal.forEach(editPost => editPost.style.display = "none")
+            }
+        })
         
         try {
-            document.getElementById('edit').onclick = () => {
-                closeGallery.click()
-                loadEditPost(name.split(" ")[0],name.split(" ")[1],img)
-                editPostModal.style.display = "flex"
-            }
+            document.querySelectorAll('#edit').forEach(editBtn => {
+                editBtn.onclick = () => {
+                    closeGallery.forEach(close => close.click())
+                    loadEditPost(name.split(" ")[0],name.split(" ")[1],img)
+                    editPostModal.forEach(editPost => editPost.style.display = "flex")
+                }
+            })
         } catch (error) {
             showNotification("","Error while trying to load data for edit!","failed")
         }
 
-        interactiveGallery.style.display = "flex"
+        interactiveGallery.forEach(gallery => gallery.style.display = "flex")
     }
     
     
