@@ -1,11 +1,11 @@
 const removePost = (post) => {
-    document.getElementsByClassName("gallery")[0].removeChild(post)
+    document.querySelectorAll(".gallery").forEach(element => element?.removeChild(post))
 }
 
 const loadEditPost = (first_name,last_name,image) => {
-    document.getElementById("first_name").value = first_name
-    document.getElementById("last_name").value = last_name
-    document.getElementById('post-preview').src = image
+    document.querySelectorAll("#first_name").forEach(fname => fname.value = first_name)
+    document.querySelectorAll("#last_name").forEach(lname => lname.value = last_name)
+    document.querySelectorAll('#post-preview').forEach(preview => preview.src = image)
 }
 
 const saveEditPost = (e,post) => {

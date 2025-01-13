@@ -5,7 +5,7 @@ const register_email = document.getElementById("register_email")
 const email_indicator = document.getElementById("email_indicator")
 const password = document.getElementById('validPassword')
 
-register_form.addEventListener("submit",(e)=>{
+register_form?.addEventListener("submit",(e)=>{
     e.preventDefault()
 
     const regex = /^[a-zA-Z\s]+$/
@@ -41,7 +41,7 @@ register_form.addEventListener("submit",(e)=>{
         showNotification("","Password must have at least eight characters!","failed")
         return
     }
-    showNotification("Successfully created account!","User doesn't exists","success")
+    showNotification("Successfully created account!","Error while creating user!","success")
 })
 
 function checkPasswordStrength(){
@@ -71,4 +71,4 @@ function checkPasswordStrength(){
     }
 }
 
-password.addEventListener("keyup",checkPasswordStrength)
+password?.addEventListener("keyup",checkPasswordStrength)

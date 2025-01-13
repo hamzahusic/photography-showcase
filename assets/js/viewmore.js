@@ -4,7 +4,7 @@ const view_more_container = document.querySelector('.view-more-container')
 
 const loadPost = async () => {
     if(postId === null){
-        view_more_container.innerHTML = `
+        view_more_container?.innerHTML = `
             <p id="not_found">Ooops.. Something went wrong (post id missing)</p>
         `
         return
@@ -15,13 +15,13 @@ const loadPost = async () => {
     const post = post_data.filter((post) => post.id == postId)[0]
 
     if(!post || post.length === 0){
-        view_more_container.innerHTML = `
+        view_more_container?.innerHTML = `
             <p id="not_found">Ooops.. Something went wrong (post doesn't exists)</p>
         `
         return
     }
 
-    view_more_container.innerHTML = `
+    view_more_container?.innerHTML = `
             <div class="view-more-options">
                 <div class="view-more-profile">
                     <img src=".${post.profile_img}" alt="Profile picture" width="50px" height="50px">
@@ -55,19 +55,19 @@ const loadPost = async () => {
         const image_container_title = document.createElement('p')
         const image_container_images = document.createElement('div')
     
-        image_container_title.innerText = "External source images"
-        image_container.appendChild(image_container_title)
-        image_container.appendChild(image_container_images)
-        image_container.classList.add('fetched_images')
+        image_container_title?.innerText = "External source images"
+        image_container?.appendChild(image_container_title)
+        image_container?.appendChild(image_container_images)
+        image_container?.classList.add('fetched_images')
     
-        image_list.forEach((image) => {
+        image_list?.forEach((image) => {
             const image_path = image.download_url.split("/5000/3333")
-            image_container_images.innerHTML+=`
+            image_container_images?.innerHTML+=`
                 <img src="${image_path[0]+'/220/300'}" alt="External source image">
             `
         })
     
-        view_more_container.appendChild(image_container)
+        view_more_container?.appendChild(image_container)
         showNotification("Successfully loaded images from external source","","success")
     } catch (error) {
         showNotification("","Error with loading images from external source","failed")
@@ -75,5 +75,7 @@ const loadPost = async () => {
 
     
 }
-loadPost()
+if(window.location.pathname.startsWith('/pages/viewmore')){
+    loadPost()
+}
 

@@ -52,17 +52,16 @@ nav {
   align-items: center;
   padding: 15px 10px;
   font-size: 18px;
-  color: var(--header-text-color);
+  color: var(--text-color);
 }
 nav a {
   text-decoration: none;
-  color: var(--header-text-color);
+  color: var(--text-color);
 }
 nav img {
   border-radius: 10px;
 }
-
-.mobile-menu-links {
+nav .mobile-menu-links {
   position: absolute;
   background-color: #52AFA2;
   padding: 20px;
@@ -77,16 +76,19 @@ nav img {
   margin: 0 10px;
   z-index: 999;
 }
-
-.active {
+nav .active {
   display: flex;
 }
-
-#menu-btn {
+nav #menu-btn {
   width: 30px;
   cursor: pointer;
   align-self: center;
   border-radius: 0px;
+}
+nav .nav-links {
+  display: none;
+  gap: 10px;
+  align-items: center;
 }
 
 header {
@@ -100,11 +102,6 @@ header {
 }
 header h1 {
   color: white;
-}
-header .nav-links {
-  display: none;
-  gap: 10px;
-  align-items: center;
 }
 header .header-input h1 {
   font-size: 30px;
@@ -136,17 +133,18 @@ header .header-input .search-bar img {
 header .header-main {
   display: grid;
   place-items: start center;
-  margin-top: 100px;
   height: 100%;
-  padding: 0 10px;
+  padding: 160px 10px 0 10px;
 }
-header #register {
-  background-color: var(--header-text-color);
-  color: var(--text-color);
+
+#register-link {
+  background-color: #52AFA2;
+  color: var(--bg-color);
   padding: 10px 15px;
   border-radius: 10px;
 }
-header #register:hover {
+
+#register-link:hover {
   background-color: rgba(223, 220, 220, 0.4);
   color: white;
   transition: all 0.5s;
@@ -400,7 +398,9 @@ ul li {
 #theme-switch img {
   mix-blend-mode: multiply;
   background-color: white;
-  padding: 10px 11px 8px 11px;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
 }
 
 .notification {
@@ -638,12 +638,7 @@ ul li {
 }
 @media screen and (min-width: 850px) {
   header {
-    height: 550px;
-  }
-  header .nav-links {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+    height: 450px;
   }
   header .header-input h1 {
     font-size: 40px;
@@ -652,11 +647,15 @@ ul li {
   header .header-input .search-bar input {
     font-size: 20px;
   }
-  #menu-btn {
-    display: none;
-    align-self: center;
+  nav .nav-links {
+    display: flex;
+    gap: 5px;
+    align-items: center;
   }
-  .mobile-menu-links {
+  nav #menu-btn {
+    display: none;
+  }
+  nav .mobile-menu-links {
     display: none;
   }
   .gallery {
@@ -665,4 +664,37 @@ ul li {
   .fetched_images div {
     justify-content: start;
   }
+}
+.nav-links a {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-links a.active-link {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+#welcome_message {
+  padding: 5px 0 0 5px;
+  background-color: #52AFA2;
+  color: var(--bg-color);
+  font-weight: 500;
+  display: none;
+}
+
+#welcome_message_login {
+  font-size: 22px;
+}
+
+#log_out_btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+}
+
+#message_modal {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -1,9 +1,10 @@
-const gallery = document.getElementsByClassName("gallery")[0]
 
 const loadPosts = async () => {
+    const gallery = document.querySelectorAll(".gallery")
     const request = await fetch('/assets/db/posts.json')
     const data = await request.json()
     const isNotHomePage = window.location.pathname.startsWith("/pages")
+    
 
     data.forEach(post => {
         
@@ -30,7 +31,9 @@ const loadPosts = async () => {
             </div>
             <img src="${isNotHomePage ? "." : ""}${post.post_img}" alt="Image by creators">
         `
-        gallery.appendChild(img_container)
+        gallery.forEach((element) => {
+            element.appendChild(img_container)
+        })
     });
     initializeGalleryEvents()
 }
